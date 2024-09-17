@@ -1,6 +1,5 @@
-
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Document, Types } from 'mongoose';
 
 export type AcessorioDocument = Acessorio & Document;
 
@@ -8,7 +7,6 @@ export type AcessorioDocument = Acessorio & Document;
 export class Acessorio {
   @Prop({ required: true })
   nome: string;
-    private _id: any;
 }
 
 export const AcessorioSchema = SchemaFactory.createForClass(Acessorio);

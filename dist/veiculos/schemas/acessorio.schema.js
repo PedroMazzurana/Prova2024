@@ -5,21 +5,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UsersModule = void 0;
-const common_1 = require("@nestjs/common");
-const mongoose_1 = require("@nestjs/mongoose");
-const users_service_1 = require("./users.service");
-const users_controller_1 = require("./users.controller");
-const user_schema_1 = require("./schemas/user.schema");
-let UsersModule = class UsersModule {
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-exports.UsersModule = UsersModule;
-exports.UsersModule = UsersModule = __decorate([
-    (0, common_1.Module)({
-        imports: [mongoose_1.MongooseModule.forFeature([{ name: user_schema_1.User.name, schema: user_schema_1.UserSchema }])],
-        controllers: [users_controller_1.UsersController],
-        providers: [users_service_1.UsersService],
-    })
-], UsersModule);
-//# sourceMappingURL=users.module.js.map
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcessorioSchema = exports.Acessorio = void 0;
+const mongoose_1 = require("@nestjs/mongoose");
+let Acessorio = class Acessorio {
+};
+exports.Acessorio = Acessorio;
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Acessorio.prototype, "nome", void 0);
+exports.Acessorio = Acessorio = __decorate([
+    (0, mongoose_1.Schema)()
+], Acessorio);
+exports.AcessorioSchema = mongoose_1.SchemaFactory.createForClass(Acessorio);
+//# sourceMappingURL=acessorio.schema.js.map
